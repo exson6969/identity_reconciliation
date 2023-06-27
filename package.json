@@ -4,7 +4,7 @@
   "description": "A web service designed to identify and track customer identities across multiple purchases. It provides an HTTP endpoint /identify that accepts customer information and consolidates it in a relational database.",
   "main": "app.ts",
   "scripts": {
-    "start": "node ./app.js",
+    "start": "node ./app.ts",
     "dev": "nodemon --watch ./src --exec ts-node ./src/app.ts",
     "build": "tsc -p ."
   },
@@ -16,10 +16,8 @@
     "mysql": "^2.18.1",
     "mysql2": "^3.4.2",
     "nodemon": "^2.0.22",
-    "sequelize": "^6.32.1",
     "supertest": "^6.3.3",
     "ts-node": "^10.9.1",
-    "typeorm": "^0.3.17",
     "typescript": "^5.1.3"
   },
   "devDependencies": {

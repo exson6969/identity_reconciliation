@@ -1,4 +1,4 @@
-# Bitespeed Documentation
+# Documentation
 
 It is a web service designed to identify and track customer identities across multiple purchases. It provides an HTTP endpoint /identify that accepts customer information and consolidates it in a relational database.
 
@@ -16,27 +16,9 @@ Before running , make sure you have the following prerequisites installed:
 ```
 git clone https://github.com/exson6969/identity_reconciliation.git
 ```
-2. Install dependencies:
+2. Run Nodejs MySQL with Docker Compose:
 ```
-npm install
-```
-3. Setting up database
-- Create database
-```
-CREATE DATABASE identity_reconciliation;
-``` 
-- Create table
-```
-CREATE TABLE contact(
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  phoneNumber VARCHAR(255) NOT NULL,
-  email VARCHAR(255) NOT NULL,
-  linkedId INT,
-  linkPrecedence ENUM('secondary', 'primary') NOT NULL,
-  createdAt DATETIME NOT NULL,
-  updatedAt DATETIME,
-  deletedAt DATETIME
-);
+docker-compose up
 ```
 ## Usage
 ### Endpoint
